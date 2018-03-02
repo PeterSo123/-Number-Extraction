@@ -8,13 +8,13 @@ int main()
     int num;
     int a, b, c, d, e, f, g, h, i;
     
-    cin >> num;
-
-    while(num <= 10 || num >= 999999999)
-    {
-     cout << “Error”;
-     cin >> num;
-    }
+    do{
+        cin >> num;
+        if (num <= 10 || num >= 999999999)
+        {
+            cout << "Error" << endl;
+        }
+    }while(num <= 10 || num >= 999999999);
     
     a = num / 100000000;
     b = (num % 100000000)/10000000;
